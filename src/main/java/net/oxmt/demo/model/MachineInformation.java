@@ -4,9 +4,9 @@ public class MachineInformation {
     private int id;
     private MachineAge age;
 
-    public MachineInformation(int id, int number, MachineAge.Units units){
-        this.setId(id);
-        setAge(new MachineAge(number, units));
+    public MachineInformation(int id, MachineAge age){
+        setId(id);
+        setAge(age);
     }
 
     public int getId() {
