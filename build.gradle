@@ -13,9 +13,23 @@ repositories {
 }
 
 dependencies {
+
+    implementation('com.github.chen0040:java-data-frame:1.0.11') {
+        exclude group: 'org.slf4j', module: 'slf4j-log4j12'
+    }
+
+    implementation('com.github.chen0040:java-local-outlier-factor:1.0.4') {
+        exclude group: 'org.slf4j', module: 'slf4j-log4j12'
+    }
+
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
     implementation 'org.springframework.boot:spring-boot-starter-web'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'org.junit.jupiter:junit-jupiter-engine'
+    testImplementation 'org.mockito:mockito-junit-jupiter'
+
 }
+
 
 test {
     useJUnitPlatform()
