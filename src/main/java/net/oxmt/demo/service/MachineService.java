@@ -19,7 +19,7 @@ public class MachineService {
     {
 
     }
-    public List<MachineInformation> getOutliers(List<MachineInformation> machineInformation) throws EmptyMachineInformationException, InvalidAgeUnitsException, InvalidAgeStringException {
+    public List<MachineInformation> getOutliers(List<MachineInformation> machineInformation) throws EmptyMachineInformationException {
 
         if(machineInformation == null)
             throw new IllegalArgumentException("machineInformation");
