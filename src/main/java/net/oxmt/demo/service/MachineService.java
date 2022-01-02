@@ -46,11 +46,12 @@ public class MachineService {
         method.setThreshold(0.2);
         DataFrame trainedData = method.fitAndTransform(dataFrame);
 
-
+        int count =0;
         for(DataRow r: trainedData){
             if(method.isAnomaly(r)) {
-               anomalies.add(new MachineInformation((int)r.getCell("machine Id"), String.format("%f days", r.getCell("age"))));
+               anomalies.add(machineInformation.get(count));
             }
+            count++;
         }
 
         return anomalies;
