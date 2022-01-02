@@ -1,4 +1,4 @@
-package net.oxmt.demo.Exceptions;
+package net.oxmt.machineoutliers.Exceptions;
 
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;

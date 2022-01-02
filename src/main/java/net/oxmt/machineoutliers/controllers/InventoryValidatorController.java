@@ -1,10 +1,10 @@
-package net.oxmt.demo.controllers;
-import net.oxmt.demo.Exceptions.InvalidAgeStringException;
-import net.oxmt.demo.Exceptions.InvalidAgeUnitsException;
-import net.oxmt.demo.model.MachineInformation;
-import net.oxmt.demo.model.dtos.MachineInformationDto;
-import net.oxmt.demo.Exceptions.EmptyMachineInformationException;
-import net.oxmt.demo.service.MachineService;
+package net.oxmt.machineoutliers.controllers;
+import net.oxmt.machineoutliers.Exceptions.InvalidAgeStringException;
+import net.oxmt.machineoutliers.Exceptions.InvalidAgeUnitsException;
+import net.oxmt.machineoutliers.model.MachineInformation;
+import net.oxmt.machineoutliers.model.dtos.MachineInformationDto;
+import net.oxmt.machineoutliers.Exceptions.EmptyMachineInformationException;
+import net.oxmt.machineoutliers.service.MachineService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;

@@ -1,4 +1,4 @@
-package net.oxmt.demo.Exceptions;
+package net.oxmt.machineoutliers.Exceptions;
 
 public class InvalidAgeStringException extends Exception {
     public InvalidAgeStringException(String errorMessage) {
