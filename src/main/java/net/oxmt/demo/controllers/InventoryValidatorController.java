@@ -1,13 +1,11 @@
 package net.oxmt.demo.controllers;
-import net.oxmt.demo.model.InvalidAgeStringException;
-import net.oxmt.demo.model.InvalidAgeUnitsException;
+import net.oxmt.demo.Exceptions.InvalidAgeStringException;
+import net.oxmt.demo.Exceptions.InvalidAgeUnitsException;
 import net.oxmt.demo.model.MachineInformation;
 import net.oxmt.demo.model.dtos.MachineInformationDto;
-import net.oxmt.demo.service.EmptyMachineInformationException;
+import net.oxmt.demo.Exceptions.EmptyMachineInformationException;
 import net.oxmt.demo.service.MachineService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
@@ -23,15 +21,13 @@ public class InventoryValidatorController {
     MachineService _machineService;
 
     @PostMapping("/validate")
-    List<MachineInformation> validate( @RequestBody @NotEmpty List<@Valid  MachineInformationDto> machineInformationDtoList) throws EmptyMachineInformationException, InvalidAgeUnitsException, InvalidAgeStringException {
+    List<MachineInformation> validate( @RequestBody @NotEmpty List<@Valid  MachineInformationDto> machineInformationDtoList) throws EmptyMachineInformationException {
 
 
     List<MachineInformation> z = machineInformationDtoList.stream().map(x -> {
         try {
             return x.toMachineInformation();
-        } catch (InvalidAgeUnitsException e) {
-            e.printStackTrace();
-        } catch (InvalidAgeStringException e) {
+        } catch (InvalidAgeUnitsException | InvalidAgeStringException e) {
             e.printStackTrace();
         }
         return null;
