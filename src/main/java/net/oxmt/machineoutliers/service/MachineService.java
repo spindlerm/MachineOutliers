@@ -1,13 +1,11 @@
-package net.oxmt.demo.service;
+package net.oxmt.machineoutliers.service;
 
 import com.github.chen0040.data.frame.BasicDataFrame;
 import com.github.chen0040.data.frame.DataFrame;
 import com.github.chen0040.data.frame.DataRow;
 import com.github.chen0040.lof.LOF;
-import net.oxmt.demo.Exceptions.EmptyMachineInformationException;
-import net.oxmt.demo.Exceptions.InvalidAgeStringException;
-import net.oxmt.demo.Exceptions.InvalidAgeUnitsException;
-import net.oxmt.demo.model.*;
+import net.oxmt.machineoutliers.Exceptions.EmptyMachineInformationException;
+import net.oxmt.machineoutliers.model.*;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;

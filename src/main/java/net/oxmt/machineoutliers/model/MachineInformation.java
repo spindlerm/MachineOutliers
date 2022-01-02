@@ -1,7 +1,7 @@
-package net.oxmt.demo.model;
+package net.oxmt.machineoutliers.model;
 
-import net.oxmt.demo.Exceptions.InvalidAgeStringException;
-import net.oxmt.demo.Exceptions.InvalidAgeUnitsException;
+import net.oxmt.machineoutliers.Exceptions.InvalidAgeStringException;
+import net.oxmt.machineoutliers.Exceptions.InvalidAgeUnitsException;
 
 import java.util.Locale;
 import java.util.Objects;

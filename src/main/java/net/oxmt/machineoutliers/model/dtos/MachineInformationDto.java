@@ -1,7 +1,7 @@
-package net.oxmt.demo.model.dtos;
-import net.oxmt.demo.Exceptions.InvalidAgeStringException;
-import net.oxmt.demo.Exceptions.InvalidAgeUnitsException;
-import net.oxmt.demo.model.MachineInformation;
+package net.oxmt.machineoutliers.model.dtos;
+import net.oxmt.machineoutliers.Exceptions.InvalidAgeStringException;
+import net.oxmt.machineoutliers.Exceptions.InvalidAgeUnitsException;
+import net.oxmt.machineoutliers.model.MachineInformation;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
