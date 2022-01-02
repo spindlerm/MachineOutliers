@@ -1,5 +1,8 @@
 package net.oxmt.demo.model;
 
+import net.oxmt.demo.Exceptions.InvalidAgeStringException;
+import net.oxmt.demo.Exceptions.InvalidAgeUnitsException;
+
 import java.util.Locale;
 import java.util.Objects;
 
@@ -37,19 +40,22 @@ public class MachineInformation {
             throw new InvalidAgeStringException(age);
         }
 
-        if(element[1].equals("days"))
-            this.ageInDays = num;
-        else if (element[1].equals("weeks")){
-            this.ageInDays = num*7;
+        switch (element[1]) {
+            case "days":
+                this.ageInDays = num;
+                break;
+            case "weeks":
+                this.ageInDays = num * 7;
+                break;
+            case "months":
+                this.ageInDays = num * 30;
+                break;
+            case "years":
+                this.ageInDays = num * 365;
+                break;
+            default:
+                throw new InvalidAgeUnitsException(element[1]);
         }
-        else if (element[1].equals("months")){
-            this.ageInDays = num*30;
-        }
-        else if (element[1].equals("years")){
-            this.ageInDays = num*365;
-        }
-        else
-            throw new InvalidAgeUnitsException(element[1]) ;
 
     }
 
